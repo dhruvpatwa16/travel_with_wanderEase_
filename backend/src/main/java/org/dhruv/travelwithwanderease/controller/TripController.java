@@ -1,5 +1,6 @@
 package org.dhruv.travelwithwanderease.controller;
 
+import jakarta.validation.Valid;
 import org.dhruv.travelwithwanderease.model.Trip;
 import org.dhruv.travelwithwanderease.repository.TripRepository;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class TripController {
     }
 
     @PostMapping
-    public Trip create(@RequestBody Trip t){
+    public Trip create(@Valid @RequestBody Trip t){
         return repo.save(t);
     }
 
