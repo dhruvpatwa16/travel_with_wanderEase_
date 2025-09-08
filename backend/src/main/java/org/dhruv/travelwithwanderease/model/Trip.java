@@ -19,9 +19,9 @@ public class Trip {
     @NotBlank(message = "Destination is required")
     private String destination;
 
-    @Min(value = 1, message = "There must be atleast 1 traveller required")
+    @Min(value = 1, message = "There must be atleast 1 traveller")
     private Integer travellers;
 
-    @Min(value = 0, message = "Budget cannot be negative")
+    @Min(value = 1, message = "Budget cannot be negative or zero")
     private Double budget;
 }
